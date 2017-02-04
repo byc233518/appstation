@@ -1,0 +1,42 @@
+extends ../layout
+
+block content
+  .container
+    .row
+      form.form-horizontal(method="post", action="/admin/apk/new")
+        input(type='hidden', name='apk[_id]', value='#{apk._id}')
+        .form-group
+          label.col-sm-2.control-label(for="inputTitle") 应用名字
+          .col-sm-10
+            input#inputTitle.form-control(type="text", name="apk[title]", value="#{apk.title}")
+        .form-group
+          label.col-sm-2.control-label(for="inputDoctor") 作者/公司
+          .col-sm-10
+            input#inputDoctor.form-control(type="text", name="apk[doctor]", value="#{apk.doctor}")
+        .form-group
+          label.col-sm-2.control-label(for="inputCountry") 国家
+          .col-sm-10
+            input#inputCountry.form-control(type="text", name="apk[country]", value="#{apk.country}")
+        .form-group
+          label.col-sm-2.control-label(for="inputLanguage") 海报图
+          .col-sm-10
+            input#inputLanguage.form-control(type="text", name="apk[language]", value="#{apk.language}")
+        .form-group
+          label.col-sm-2.control-label(for="inputPoster") 图标
+          .col-sm-10
+            input#inputPoster.form-control(type="text", name="apk[poster]", value="#{apk.poster}")
+        .form-group
+          label.col-sm-2.control-label(for="inputFlash") 下载地址
+          .col-sm-10
+            input#inputFlash.form-control(type="text", name="apk[flash]", value="#{apk.flash}")
+        .form-group
+          label.col-sm-2.control-label(for="inputYear") 时间
+          .col-sm-10
+            input#inputYear.form-control(type="text", name="apk[year]", value="#{apk.year}")
+        .form-group
+          label.col-sm-2.control-label(for="inputSummary") 简介
+          .col-sm-10
+            input#inputSummary.form-control(type="text", name="apk[summary]", value="#{apk.summary}")
+        .form-group
+          label.col-sm-offset-2.col-sm-10
+          button.btn.btn-default(type="submit") 录入
