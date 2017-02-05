@@ -4,10 +4,10 @@ block content
   .container
     .row
       each item in apks
-        .col-md-2
+        .col-md-2.col-xs-6
           .thumbnail
             a(href="/apk/#{item._id}")
               img(src="#{item.poster}", alt="#{item.title}")
             .caption
-              h3 #{item.title}
+              h3.text-ellipsis #{item.title}
               p: a.btn.btn-primary(href="/apk/#{item.id}", role="button") 查看详情
