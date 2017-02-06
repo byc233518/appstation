@@ -8,7 +8,8 @@ var port = process.env.PORT || 3001;
 var app = express();
 
 
-mongoose.connect('mongodb://210.209.85.192:27017/byc/appstation');
+// mongoose.connect('mongodb://210.209.85.192:27017/byc/appstation');
+mongoose.connect('mongodb://byc:byc@210.209.85.192:27017/byc/appstation');
 mongoose.connection.on('connected', function () {
   console.log('Connection success!');
 });
