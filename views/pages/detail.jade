@@ -7,15 +7,13 @@ block content
         img(src="#{apk.language}")
       .col-md-5
         dl.dl-horizontal
-          dt 应用名字
-          dd= apk.title
-          dt 作者/公司
-          dd= apk.doctor
-          dt 国家
-          dd= apk.country
-          dt 时间
-          dd= apk.year
-          dt 简介
-          dd= apk.summary
+          dt 商品名称
+          dd=  apk.title
+          dt 价格
+          dd=   apk.doctor
+          dt 产地
+          dd=   apk.country
+          dt 介绍
+          dd=   apk.summary
           dd
-            a.btn.btn-danger(href="#{apk.flash}" target="_blank") 下载
+            a.btn.btn-danger(href="#{apk.flash}" target="_blank") 购买

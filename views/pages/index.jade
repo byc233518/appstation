@@ -7,7 +7,8 @@ block content
         .col-md-2.col-xs-6
           .thumbnail
             a(href="/apk/#{item._id}")
-              img(src="#{item.poster}", alt="#{item.title}")
+              img(src="#{item.poster}", alt="#{item.title}", style="width: 142.5px; height:94.36px;")
             .caption
-              h3.text-ellipsis #{item.title}
-              p: a.btn.btn-primary(href="/apk/#{item.id}", role="button") 查看详情
+              p.text-ellipsis(style="margin-top: 10px;") #{item.title}
+              p 价格: ¥ #{item.doctor}
+              p: a.btn.btn-primary.btn-sm(href="/apk/#{item.id}", role="button") 查看详情

@@ -4,11 +4,11 @@ var bodyParser = require('body-parser');
 var _ = require('underscore');
 var mongoose = require('mongoose');
 var Apk = require('./models/apk.js');
-var port = process.env.PORT || 3001;
+var port = process.env.PORT || 4001;
 var app = express();
 
 
-mongoose.connect('mongodb://210.209.85.192:27017/byc/appstation');
+mongoose.connect('mongodb://127.0.0.1:27017');
 mongoose.connection.on('connected', function () {
   console.log('Connection success!');
 });
@@ -125,7 +125,7 @@ app.get('/admin/list', function (req, res) {
       console.log(err);
     }
     res.render('list', {
-      title: '应用列表',
+      title: '商品列表',
       apks: apks
     });
   })
